@@ -1,0 +1,9 @@
+#!/bin/bash
+#source /home/ec2-user/new.sh
+echo "enter first number";
+read a
+echo "enter second name";
+read b
+x=$( expr "$a" + "$b")
+echo sum = $x
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+httpd -v
+systemctl status httpd
+cat /etc/httpd/conf/httpd.conf | grep ^Listen
+

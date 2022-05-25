@@ -1,0 +1,20 @@
+#!/bin/bash
+read -p " enter your action for httpd: " user_action
+if [[ $user_action == "start" ]]
+then
+         echo "starting httpd......."
+        systemctl status httpd &> /dev/null || systemctl start httpd
+elif [[ $user_action == "stop" ]]
+then
+         echo "stoping httpd......."
+        systemctl status httpd &> /dev/null && systemctl stop httpd
+elif [[ $user_action == "restart" ]]
+then
+         echo "restarting httpd......."
+         systemctl restart httpd
+elif [[ $user_action == "status" ]]
+then
+         echo "getting status of httpd......."
+         systemctl status  httpd
+fi
+
